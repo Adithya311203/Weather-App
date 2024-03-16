@@ -15,7 +15,7 @@ async function checkWeather(city){
     document.querySelector('.humidity').innerHTML=data.main.humidity+" %";
     document.querySelector('.wind').innerHTML=data.wind.speed+" km/h";
     document.querySelector('.temp').innerHTML=(data.main.temp).toFixed(1)+" °C"
-    document.querySelector('.weathericon').src=`${data.weather[0].main}.png`
+    document.querySelector('.weathericon').src=`/${data.weather[0].main}.png`
 }}
 searchBtn.addEventListener("click",()=>{
     checkWeather(searchBox.value);
